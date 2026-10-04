@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Internship Management System</h1>
+
+        <div class="form-box">
+            <h2>Add Internship</h2>
+
+            <input type="text" id="name" placeholder="Student Name">
+            <input type="text" id="college" placeholder="College Name">
+            <input type="text" id="company" placeholder="Company Name">
+            <input type="text" id="role" placeholder="Internship Role">
+            <input type="date" id="startDate">
+
+            <button onclick="addInternship()">Add Internship</button>
+        </div>
+
+        <div class="dashboard">
+            <div>
+                <h3>Total Internships</h3>
+                <p id="total">0</p>
+            </div>
+
+            <div>
+                <h3>Search</h3>
+                <input type="text" id="search"
+                       placeholder="Search student..."
+                       onkeyup="displayInternships()">
+            </div>
+        </div>
+
+        <h2>Internship Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>College</th>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Start Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="internshipList">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
